@@ -1,0 +1,47 @@
+<div class="nav-right nav-menu">
+  <a class="nav-item" (click)="toogleCart()"><i class="fa fa-shopping-cart is-large" aria-hidden="true"></i>&nbsp;({{ totalItems }})</a>
+  <a class="card-header-icon" (click)="toogleCart()">
+      <span class="icon">
+        <i [ngClass]="(this.displayCart)?'fa fa-angle-up':'fa fa fa-angle-down'"></i>
+      </span>
+    </a>
+</div>
+<div [style.display]="!this.displayCart?'none':'inherit'">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Unity</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>$ {{getSubTotal()}}</th>
+        <th></th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <th>{{item.name}}</th>
+        <th>{{item.category}}</th>
+        <th>{{item.unity}}</th>
+        <th>{{item.price}}</th>
+        <th>
+            <a class="nav-item" (click)="removeItemFromCart(item)"><i class="fa fa-times dark" aria-hidden="true"></i></a>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <p class="has-text-right">
+      <button (click)="checkout()" [style.display]="hasItemsInCart()?'inherit':'none'" class="button is-success is-large animated pulse infinite"><i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;CHECKOUT</button>
+    </p>
+  </div>
+  <br>
+</div>

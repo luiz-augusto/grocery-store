@@ -1,0 +1,87 @@
+<nav class="level">
+    <div class="level-right sortable">
+        <p class="level-item"><button class="button" (click)="add()"><i class="fa fa-plus" aria-hidden="true"></i></button></p>
+    </div>
+</nav>
+<ul class="d-wrapper" [dragula]='"fourth-bag"'>
+    <li class="d-container card is-large" *ngFor="let groceries of groceriesList" [attr.data-id]="groceries.id">
+        <div class="columns">
+            <div class="column">
+                <div class="level">
+                    <div class="level-left">
+                        <figure class="image is-64x64">
+                            <img src="http://bulma.io/images/placeholders/64x64.png" alt="Image">
+                        </figure>
+                        <a class="dark" (click)="getItem(groceries.id)">
+                            <h1 class="title is-3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>{{ groceries.name }}</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">Category</label>
+                {{ groceries.category}}
+            </div>
+            <div class="column">
+                <nav class="level">
+                    <div class="level-left">
+                        <strong><h1 class="title is-3">$ {{ groceries.price | number: '1.2-2' }}</h1></strong>
+                        &nbsp;<small>per {{ groceries.unity}}</small>
+                    </div>
+                    <div class="level-right">
+                        <a class="level-item dark" (click)="addToCart(groceries)">
+                            <span class="icon is-large is-dark"><i [ngClass]="(isGloceriesSelected(groceries))?'fa fa-cart-arrow-down':'fa fa-cart-plus'" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="modal" [ngClass]="displayModal?'is-active':''">
+    <form #f="ngForm" (ngSubmit)="save(groceries)">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">{{ groceries.name }}</p>
+                <button class="delete" (click)="cancel()"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="notification is-danger" *ngIf="errors.length > 0">
+                    <ul>
+                        <li *ngFor="let error of errors">{{ error.message }}</li>
+                    </ul>
+                </div>
+                <label class="label">Name</label>
+                <p class="control">
+                    <input class="input is-large" type="text" [(ngModel)]="groceries.name" id="name" name="name" placeholder="Enter a name" required>
+                </p>
+                <label class="label">Price</label>
+                <p class="control">
+                    <input class="input is-large" type="number" step="0.01" min="0" [(ngModel)]="groceries.price" id="price" name="price" placeholder="Enter a value" required>
+                </p>
+                <label class="label">Unity</label>
+                <p class="control">
+                    <span class="select is-large">
+                        <select [(ngModel)]="groceries.unity" id="unity" name="unity" required>
+                            <option *ngFor="let c of unities" [ngValue]="c.id">{{c.name}}</option>
+                        </select>
+                    </span>
+                </p>
+                <label class="label">Categories</label>
+                <p class="control">
+                    <span class="select is-large">
+                        <select [(ngModel)]="groceries.category" id="category" name="category" required>
+                            <option *ngFor="let c of categories" [ngValue]="c.id">{{c.name}}</option>
+                        </select>
+                    </span>
+                </p>
+            </section>
+            <footer class="modal-card-foot">
+                <button type="submit" class="button is-large is-success">Save</button>
+                <a class="button is-large" (click)="cancel()">Cancel</a>
+                <a class="button is-large is-danger" (click)="delete(groceries)" [style.display]="isInserting(groceries)?'none':'inherit'">Delete</a>
+            </footer>
+        </div>
+    </form>
+</div>

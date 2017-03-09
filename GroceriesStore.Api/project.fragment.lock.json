@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "exports": {
+    "GroceryStore.Domain/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/ModernStore.Domain.dll": {}
+      },
+      "runtime": {
+        "../packages/FluentValidator.1.0.5/lib/net461/FluentValidator.dll": {},
+        "bin/Debug/ModernStore.Domain.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ModernStore.Domain.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "GroceryStore.Infra/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/ModernStore.Infra.dll": {}
+      },
+      "runtime": {
+        "../packages/Dapper.1.50.2/lib/net451/Dapper.dll": {},
+        "../packages/FluentValidator.1.0.5/lib/net461/FluentValidator.dll": {},
+        "bin/Debug/ModernStore.Infra.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/ModernStore.Infra.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "GroceryStore.Shared/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/GroceriesStore.Shared.dll": {}
+      },
+      "runtime": {
+        "../packages/FluentValidator.1.0.5/lib/net461/FluentValidator.dll": {},
+        "bin/Debug/GroceriesStore.Shared.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/GroceriesStore.Shared.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}

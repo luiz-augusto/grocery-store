@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Groceries xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <GroceriesMap>
+    <Id>77ab77bb-fce4-4de6-bd95-3756c3bbad5f</Id>
+    <Name>Activia Natural Yoghurt</Name>
+    <Price>0.45</Price>
+    <Unity>Unity</Unity>
+    <Category>FrozenFoods</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>478b8c63-2828-4b39-8bbd-f857cc740a21</Id>
+    <Name>Bay Salmon</Name>
+    <Price>15.52</Price>
+    <Unity>Grams</Unity>
+    <Category>Meat</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>7543f4e1-2872-4422-a679-e6d4a4fee4d6</Id>
+    <Name>Cheese Twist</Name>
+    <Price>1</Price>
+    <Unity>Unity</Unity>
+    <Category>Bakery</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>8e626c8c-9187-448f-99db-d5eae2ba680b</Id>
+    <Name>Diet Coke 330 Ml</Name>
+    <Price>0.9</Price>
+    <Unity>Unity</Unity>
+    <Category>Beverages</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>2c67275a-3b33-49df-9276-e812bc44a445</Id>
+    <Name>Egg White</Name>
+    <Price>3</Price>
+    <Unity>Unity</Unity>
+    <Category>Other</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>26c27c58-0570-4627-af02-6bc94e6da0b3</Id>
+    <Name>Fanta Orange</Name>
+    <Price>1.9</Price>
+    <Unity>Liters</Unity>
+    <Category>Beverages</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>cbb3efd9-3bc1-4d5b-887a-7ecd9ca61eef</Id>
+    <Name>Gift Bag</Name>
+    <Price>1.5</Price>
+    <Unity>Unity</Unity>
+    <Category>PaperGoods</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>1d3938bc-248a-43b7-8f8c-f2e1b3fc10c1</Id>
+    <Name>Heinz Cream Of Tomato</Name>
+    <Price>1.1</Price>
+    <Unity>Unity</Unity>
+    <Category>Canned</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>1077aee4-398d-4167-8d27-5206216a8fdf</Id>
+    <Name>Ice Cream Nestle</Name>
+    <Price>10.49</Price>
+    <Unity>Unity</Unity>
+    <Category>FrozenFoods</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>a42317cc-7029-4726-a96b-6dff88aaffb2</Id>
+    <Name>Jam Sugar</Name>
+    <Price>2.08</Price>
+    <Unity>Unity</Unity>
+    <Category>Other</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>37561d65-0ac5-4fa1-9018-4d2ed082d10e</Id>
+    <Name>Kinder Surprise Egg</Name>
+    <Price>0.9</Price>
+    <Unity>Unity</Unity>
+    <Category>Other</Category>
+  </GroceriesMap>
+  <GroceriesMap>
+    <Id>6f9402fd-ec08-4640-b404-64925bbc7688</Id>
+    <Name>Led 50w</Name>
+    <Price>3.5</Price>
+    <Unity>Unity</Unity>
+    <Category>Other</Category>
+  </GroceriesMap>
+</Groceries>

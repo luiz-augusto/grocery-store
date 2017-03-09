@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B6AC4E5-B2AC-40E3-B5B1-A301EC1F21CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModernStore.Domain</RootNamespace>
+    <AssemblyName>ModernStore.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidator.1.0.5\lib\net461\FluentValidator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Handlers\GetGroceriesCommandHandler.cs" />
+    <Compile Include="Commands\Handlers\SearchGroceriesCommandHandler.cs" />
+    <Compile Include="Commands\Handlers\DeleteGroceriesCommandHandler.cs" />
+    <Compile Include="Commands\Handlers\UpdateGroceriesPositionCommandHandler.cs" />
+    <Compile Include="Commands\Handlers\UpdateGroceriesCommandHandler.cs" />
+    <Compile Include="Commands\Handlers\RegisterGroceriesCommandHandler.cs" />
+    <Compile Include="Commands\Inputs\SearchGroceriesCommand.cs" />
+    <Compile Include="Commands\Inputs\GetGroceriesCommand.cs" />
+    <Compile Include="Commands\Inputs\DeleteGroceriesCommand.cs" />
+    <Compile Include="Commands\Inputs\UpdateGroceriesPositionCommand.cs" />
+    <Compile Include="Commands\Inputs\UpdateGroceriesCommand.cs" />
+    <Compile Include="Commands\Inputs\RegisterGroceriesCommand.cs" />
+    <Compile Include="Commands\Results\GetGroceriesCommandResult.cs" />
+    <Compile Include="Commands\Results\SearchGroceriesCommandResult.cs" />
+    <Compile Include="Commands\Results\RegisterGroceriesCommandResult.cs" />
+    <Compile Include="Commands\Results\DeleteGroceriesCommandResult.cs" />
+    <Compile Include="Commands\Results\UpdateGroceriesPositionCommandResult.cs" />
+    <Compile Include="Commands\Results\UpdateGroceriesCommandResult.cs" />
+    <Compile Include="Entities\Groceries.cs" />
+    <Compile Include="Enums\Category.cs" />
+    <Compile Include="Enums\Unity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IGroceriesRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GroceriesStore.Shared\GroceryStore.Shared.csproj">
+      <Project>{598b60a9-a59f-415a-aa16-265160d0b78b}</Project>
+      <Name>GroceryStore.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValueObjects\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
