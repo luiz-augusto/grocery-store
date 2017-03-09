@@ -33,8 +33,6 @@ namespace GroceriesStore.Domain.Commands.Handlers
 
             groceries.RemoveAt(oldIndex);
 
-            if (newIndex > oldIndex) newIndex--;
-            // the actual index could have shifted due to the removal
             groceries.Insert(newIndex, grocery);
 
             AddNotifications(grocery.Notifications);   

@@ -180,7 +180,7 @@ namespace GroceriesStore.Domain.Tests
             var grocery = groceries.GroceriesList.FirstOrDefault(x => x.Id == command.Id);
             var index = groceries.GroceriesList.ToList().LastIndexOf(grocery);
 
-            Assert.AreEqual(index, (command.Position - 1)); //The element was moved from 1 to 2. How the element was in the first position, the index changed from 2 to 1;
+            Assert.AreEqual(index, (command.Position)); //The element was moved from 1 to 2. How the element was in the first position, the index changed from 2 to 1;
         }
 
         [TestMethod]
