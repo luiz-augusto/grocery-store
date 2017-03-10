@@ -12,11 +12,9 @@
   - https://www.microsoft.com/en-us/download/details.aspx?id=48146
 
 ### 1.2 -Installing .NET Framework 4.6.1
->This framework is usually part of Visual Studio 2015
   - Direct Link: https://www.microsoft.com/pt-br/download/details.aspx?id=49981
 
 ### 1.3 - Installing DotNetCore
->This framework is usually part of Visual Studio 2015
   - https://www.microsoft.com/net/download/core#/sdk
   - Direct Link: ttps://go.microsoft.com/fwlink/?linkid=843448
 
@@ -26,19 +24,19 @@
   - x32 Direct Link: 
   https://nodejs.org/dist/v6.9.1/node-v6.9.1-x86.msi
 
-After install the programs, reboot your machine.
-After perform the reboot, open the prompt and type:
+After you install all programs, reboot your machine, open the prompt and type:
 ```
 > node --version
 > npm --version
 ```
 It should return the version of the node and npm(this program is part of nodejs) that you have installed.
 
-    After perform all the intallations, clone the repository, open the solution and restore the nuget packages.
+    After perform all the intallations, clone the repository, open the solution, wait the visual studio download the node_modules and perform a build in order to restore the nuget packages.
 
 # 2 - Setup of the FrontEnd (Runtime)
-    Easy mode =)
-> If you want to run as developer mode, go to step 3.
+	This step 2 is the easiest mode.
+
+> If you want to run the frontend as developer mode, go to step 3.
 
 Open the prompt and type:
 ```
@@ -67,8 +65,8 @@ Run the command
 > npm install -g angular-cli
 ```
 >It will install the tools required to run the frontend.
->You can use the Visual Studio 2015 ISSExpress to run this app too. Just make a right click in the file index.html, located in the root folder of the grocery-store-front and select View in Brower.
->Using IISExpress, you will need run the API and GroceryStore.Api and then, >press F5 in the browser in the page of the frontend in order to load the data >from backend.
+>You can use the Visual Studio 2015 ISSExpress to run this app too. Just do a right click in the file index.html, located in the root folder of the grocery-store-front and then select View in Brower.
+>Using IISExpress, you will need run the API and GroceryStore.Api and after, on the browser, press F5 in the frontend page, in order to load the data from backend.
 >Right click in the GroceryStore.Api project, set as Startup Project and press F5.
 
     The follows steps is to angular-cli, you can skip it, if you want to use the IISExpress.
@@ -97,6 +95,6 @@ Open the link:
 http://localhost:4200
 Remember to run the GroceryStore.Api in order to load the data.
 Right click in the GroceryStore.Api project, set as Startup Project and press F5.
-If you have any problems with this port, you can open the file  GroceryStore.Api > Properties > lanchSettings.json and edit the port number. Open the file grocery-store-front > src > enviroment > (environment.ts|environment.prod.ts) and edit the port number.
+If you have any problems with this port, you can open the file  GroceryStore.Api > Properties > lanchSettings.json and edit the port number. Open the file grocery-store-front > src > enviroment > (environment.ts|environment.prod.ts) and edit the port number too.
 
  Let me know if you have any problems!
